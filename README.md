@@ -1,5 +1,5 @@
 Freeze
-======
+------
 
 A simple Bukkit plugin to perform mass operations on the whitelist.
 
@@ -7,7 +7,7 @@ Currently the plugin is designed to compile and run with bukkit-1.2.5-R4.0.
 Using a different version could may it to malfunction.
 
 Building
-========
+--------
 
 1. Download Bukkit from http://dl.bukkit.org/downloads/bukkit/list/rb/.
    (Use 1.2.5-R4.0 for best compatibility!)
@@ -20,23 +20,23 @@ Building
 
 
 Installation
-============
+------------
 
 1. Move 'Freeze.jar' from the bin directory into the plugins folder of your bukkit server.
 
 
 Command Usage
-=============
+-------------
 
 /freeze [-e]
 Add all online players to the whitelist.
 
 Options:
 
--e	Make sure the whitelist is enabled. If it is off, turn it on, then proceed to add players as normal.
+**-e**  Make sure the whitelist is enabled. If it is off, turn it on, then proceed to add players as normal.
 
 License
-=======
+-------
 
 Copyright (C) 2012 Arjun Govindjee
 
@@ -54,6 +54,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Contact
-=======
+-------
 
-You can contact the original developer of the Freeze plugin by email at arjunyg@gmail.com.
+You can contact the original developer of the Freeze plugin by email at **arjunyg@gmail.com**.
