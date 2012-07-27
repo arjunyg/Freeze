@@ -4,6 +4,14 @@ Freeze
 A simple Bukkit plugin to perform mass operations on the whitelist.
 
 
+Building
+========
+
+1. cd to the top level directory.
+
+2. Type 'make' to build the plugin.
+
+
 Installation
 ============
 
