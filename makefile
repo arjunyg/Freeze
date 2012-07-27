@@ -1,7 +1,7 @@
 PLUGIN=$(shell basename `pwd`)
 OBJ_DIR=bin
 SRC_DIR=src
-BUKKIT_API=craftbukkit-1.2.5-R4.0.jar
+BUKKIT_API=lib/bukkit.jar
 JAR=$(PLUGIN).jar
 
 include sources.mk

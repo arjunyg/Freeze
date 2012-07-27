@@ -3,13 +3,20 @@ Freeze
 
 A simple Bukkit plugin to perform mass operations on the whitelist.
 
+Currently the plugin is designed to compile and run with bukkit-1.2.5-R4.0.
+Using a different version could may it to malfunction.
 
 Building
 ========
 
-1. cd to the top level directory.
+1. Download Bukkit from http://dl.bukkit.org/downloads/bukkit/list/rb/.
+   (Use 1.2.5-R4.0 for best compatibility!)
 
-2. Type 'make' to build the plugin.
+2. Move your download of bukkit to lib/bukkit.jar or create a link in lib called bukkit.jar that points to your copy of bukkit.
+
+2. cd to the project directory.
+
+3. Type 'make' to build the plugin.
 
 
 Installation
