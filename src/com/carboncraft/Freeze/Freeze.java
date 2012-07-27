@@ -1,3 +1,6 @@
+/*
+ * Copyright (C) 2012 Arjun Govindjee.
+ */
 
 package com.carboncraft.Freeze;
 

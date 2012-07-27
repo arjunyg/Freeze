@@ -22,7 +22,7 @@ Building
 Installation
 ============
 
-1. Move 'Freeze.jar' into the plugins folder of your bukkit server.
+1. Move 'Freeze.jar' from the bin directory into the plugins folder of your bukkit server.
 
 
 Command Usage
