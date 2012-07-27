@@ -1,0 +1,6 @@
+package-as: Freeze
+externals:
+    Freeze:
+        url: git://github.com/arjunyg/Freeze.git
+        tag: latest
+license-output: GPL.txt
