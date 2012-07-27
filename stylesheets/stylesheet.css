@@ -359,7 +359,8 @@ Full-Width Styles
   height:70px;
   text-indent: -5000px;
   overflow: hidden;
-r  margin-left: 10px;
+  background: url(../images/sprite_download_jar.png) no-repeat bottom;
+  margin-left: 10px;
 }
 
 .jar_download_link:hover {
