@@ -25,30 +25,8 @@ public class Freeze extends JavaPlugin {
         PluginDescriptionFile pdFile = this.getDescription();
         log.info("[Freeze] " + pdFile.getName() + " v" + pdFile.getVersion() + " enabled.");
         server = getServer();
-    }
-
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if(cmd.getName().equalsIgnoreCase("freeze")) {
-            int count = 0;
-            if (args.length == 0) {
-                sender.sendMessage(ChatColor.GREEN+"Whitelisted "+ChatColor.AQUA+Integer.toString(freeze())+ChatColor.GREEN+" players.");
-                return true;
-            }
-            if (args.length == 1) {
-                if (args[0].equals("-e")) {
-                    if (server.hasWhitelist()) {
-                        sender.sendMessage(ChatColor.RED+"Server already whitelisted!");
-                    }
-                    else {
-                        server.setWhitelist(true);
-                        sender.sendMessage(ChatColor.GREEN+"Enabled whitelist.");
-                    }
-                    sender.sendMessage(ChatColor.GREEN+"Whitelisted "+ChatColor.AQUA+Integer.toString(freeze())+ChatColor.GREEN+" players.");
-                }
-                return true;
-            }
-        }
-        return false; 
+        FreezeCommandExecutor cmdX = new FreezeCommandExecutor(this);
+        getCommand("freeze").setExecutor(cmdX);
     }
 
     public int freeze() {
@@ -58,6 +36,15 @@ public class Freeze extends JavaPlugin {
                 p.setWhitelisted(true);
                 count++;
             }
+        }
+        return count;
+    }
+
+    public int clear() {
+        int count = 0;
+        for ( Player p : server.getWhitelistedPlayers() ) {
+            p.setWhitelisted(false);
+            count++;
         }
         return count;
     }
