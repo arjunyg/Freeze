@@ -28,12 +28,21 @@ Installation
 Command Usage
 -------------
 
-/freeze [-e]
-Add all online players to the whitelist.
+/freeze [arguments ...]
 
-Options:
+Arguments:
 
-**-e**  Make sure the whitelist is enabled. If it is off, turn it on, then proceed to add players as normal.
+**e**  Make sure the whitelist is enabled. If it is off, turn it on, then proceed to add players as normal.
+**p<limit>** Sets a limit on the number of players that can be added.
+**c** Clears the whitelist.
+
+Examples:
+
+/freeze p30 e : Add 30 players to the whitelist and make sure it is enabled.
+
+/freeze c : Clear the whitelist.
+
+/freeze : Add all online players to the whitelist.
 
 License
 -------
