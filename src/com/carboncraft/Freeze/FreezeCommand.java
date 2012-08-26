@@ -6,6 +6,10 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.ChatColor;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class FreezeCommand {
     
     private Server server;
@@ -57,7 +61,9 @@ public class FreezeCommand {
             }
         }
 
-        for ( OfflinePlayer p : server.getOnlinePlayers() ) {
+        ArrayList<OfflinePlayer> players = new ArrayList(Arrays.asList(server.getOnlinePlayers()));
+        Collections.shuffle(players);
+        for ( OfflinePlayer p : players ) {
             if (playerLimit > 0 && count == playerLimit) {
                 break;
             }
