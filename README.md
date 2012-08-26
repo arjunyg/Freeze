@@ -3,7 +3,7 @@ Freeze
 
 A simple Bukkit plugin to perform mass operations on the whitelist.
 
-Currently the plugin is designed to compile and run with bukkit-1.2.5-R4.0.
+Currently the plugin is designed to compile and run with bukkit-1.3.1-R2.0.
 Using a different version may cause it to malfunction.
 
 Building
