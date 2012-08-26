@@ -10,7 +10,7 @@ Building
 --------
 
 1. Download Bukkit from http://dl.bukkit.org/downloads/bukkit/list/rb/.
-   (Use 1.2.5-R4.0 for best compatibility!)
+   (Use 1.3.1-R2.0 for best compatibility!)
 
 2. Move your download of bukkit to lib/bukkit.jar or create a link in lib called bukkit.jar that points to your copy of bukkit.
 
