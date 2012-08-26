@@ -7,6 +7,5 @@ main: com.carboncraft.Freeze.Freeze
 commands:
   freeze:
     description: Add all online users to the whitelist.
-    usage: /<command>
     permission: freeze.freeze
     permission-message: §4You do not have permission to do that.

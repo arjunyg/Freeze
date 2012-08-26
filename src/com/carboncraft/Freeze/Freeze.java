@@ -40,14 +40,14 @@ public class Freeze extends JavaPlugin {
         return count;
     }
 
-    public int clear() {
+    /*public int clear() {
         int count = 0;
         for ( Player p : server.getWhitelistedPlayers() ) {
             p.setWhitelisted(false);
             count++;
         }
         return count;
-    }
+    }*/
 
     public void onDisable() {
         log.info("[Freeze] Freeze plugin shutting down. The whitelist will be saved.");
