@@ -61,7 +61,7 @@ public class FreezeCommand {
             }
         }
 
-        ArrayList<OfflinePlayer> players = new ArrayList(Arrays.asList(server.getOnlinePlayers()));
+        ArrayList<OfflinePlayer> players = new ArrayList<OfflinePlayer>(Arrays.asList(server.getOnlinePlayers()));
         Collections.shuffle(players);
         for ( OfflinePlayer p : players ) {
             if (playerLimit > 0 && count == playerLimit) {

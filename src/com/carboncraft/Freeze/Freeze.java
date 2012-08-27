@@ -23,7 +23,7 @@ public class Freeze extends JavaPlugin {
     public void onEnable() {
         log.setLevel(Level.INFO);
         PluginDescriptionFile pdFile = this.getDescription();
-        log.info("[Freeze] " + pdFile.getName() + " v" + pdFile.getVersion() + " enabled.");
+        //log.info("[Freeze] " + pdFile.getName() + " v" + pdFile.getVersion() + " enabled.");
         server = getServer();
         FreezeCommandExecutor cmdX = new FreezeCommandExecutor(this);
         getCommand("freeze").setExecutor(cmdX);
