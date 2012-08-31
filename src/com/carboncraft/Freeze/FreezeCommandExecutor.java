@@ -1,29 +1,26 @@
 
 package com.carboncraft.Freeze;
 
-import org.bukkit.Server;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.Command;
+import org.bukkit.command.PluginCommand;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import org.bukkit.OfflinePlayer;
 
 public class FreezeCommandExecutor implements CommandExecutor {
 
-    private Freeze plugin;
     private final Logger log = Logger.getLogger("Minecraft.Freeze");
 
-    public FreezeCommandExecutor(Freeze plugin) {
-        this.plugin = plugin;
-    }
-
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        FreezeCommand freezeCmd = new FreezeCommand(plugin, sender);
+        FreezeCommand freezeCmd = new FreezeCommand((Freeze)((PluginCommmand)cmd).getPlugin(), sender);
         for (int c = 0; c < args.length; c++) {
             args[c] = args[c].toLowerCase();
             switch (args[c].charAt(0)) {

@@ -24,7 +24,7 @@ public class Freeze extends JavaPlugin {
 
         server = getServer();
 
-        FreezeCommandExecutor cmdX = new FreezeCommandExecutor(this);
+        FreezeCommandExecutor cmdX = new FreezeCommandExecutor();
         getCommand("freeze").setExecutor(cmdX);
     }
 
