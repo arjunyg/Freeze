@@ -20,7 +20,7 @@ public class FreezeCommandExecutor implements CommandExecutor {
     private final Logger log = Logger.getLogger("Minecraft.Freeze");
 
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        FreezeCommand freezeCmd = new FreezeCommand((Freeze)((PluginCommmand)cmd).getPlugin(), sender);
+        FreezeCommand freezeCmd = new FreezeCommand((Freeze)((PluginCommand)cmd).getPlugin(), sender);
         for (int c = 0; c < args.length; c++) {
             args[c] = args[c].toLowerCase();
             switch (args[c].charAt(0)) {
