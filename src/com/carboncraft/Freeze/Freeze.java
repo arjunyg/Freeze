@@ -5,7 +5,6 @@
 package com.carboncraft.Freeze;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.Server;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.Command;
@@ -22,8 +21,6 @@ public class Freeze extends JavaPlugin {
    
     public void onEnable() {
         log.setLevel(Level.INFO);
-        PluginDescriptionFile pdFile = this.getDescription();
-        //log.info("[Freeze] " + pdFile.getName() + " v" + pdFile.getVersion() + " enabled.");
 
         server = getServer();
 
