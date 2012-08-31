@@ -47,7 +47,6 @@ public class FreezeCommand {
                 count++;
             }
             sender.sendMessage(ChatColor.GREEN + "Removed " + ChatColor.AQUA + Integer.toString(count) + ChatColor.GREEN + " player" + ((count!=1)?"s":"") + " from the whitelist.");
-            return;
         }
 
         if (checkWhitelistEnabled) {
