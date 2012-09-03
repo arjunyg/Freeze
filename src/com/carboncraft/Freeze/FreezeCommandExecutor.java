@@ -22,50 +22,65 @@ public class FreezeCommandExecutor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         FreezeCommand freezeCmd = new FreezeCommand((Freeze)((PluginCommand)cmd).getPlugin(), sender);
         for (int c = 0; c < args.length; c++) {
-            args[c] = args[c].toLowerCase();
-            switch (args[c].charAt(0)) {
-                case 'c':
-                    if (args[c].length() > 1 && !args[c].equals("clear")) {
-                        helpMessage(sender);
-                        return true;
-                    }
-                    freezeCmd.setClear();
-                    break;
-                case 'e':
-                    if (args[c].length() > 1 && !args[c].equals("enable")) {
-                        helpMessage(sender);
-                        return true;
-                    }
-                    freezeCmd.setCheckWhitelistEnabled();
-                    break;
-                case 'p':
-                    String[] split = args[c].split(":");
-                    if (split.length != 2) {
-                        helpMessage(sender);
-                        return true;
-                    }
+            String[] split = args[c].split(":");
+            if (args[c].length() > 0) {
+                switch (args[c].charAt(0)) {
+                    case 'c':
+                        if (args[c].length() > 1 && !args[c].equals("clear")) {
+                            helpMessage(sender);
+                            return true;
+                        }
+                        freezeCmd.setClear();
+                        break;
+                    case 'e':
+                        if (args[c].length() > 1 && !args[c].equals("enable")) {
+                            helpMessage(sender);
+                            return true;
+                        }
+                        freezeCmd.setCheckWhitelistEnabled();
+                        break;
+                    case 'p':
+                        if (split.length != 2) {
+                            helpMessage(sender);
+                            return true;
+                        }
 
-                    final String[] playerLimitVariations = { "p", "plimit", "playerlimit" };
-                    boolean flag = false;
-                    for ( String s : playerLimitVariations )
-                        if (split[0].equals(s))
-                            flag = true;
+                        if (!stringMatches(split[0], "p", "plimit", "playerlimit")) {
+                            helpMessage(sender);
+                            return true;
+                        }
 
-                    if (!flag) {
+                        Scanner scanner = new Scanner(split[1]);
+                        if (!scanner.hasNextInt()) {
+                            helpMessage(sender);
+                            return true;
+                        }
+                        freezeCmd.setPlayerLimit(scanner.nextInt());
+                        break;
+                    case 's':
+                        if (split.length != 2) {
+                            helpMessage(sender);
+                            return true;
+                        }
+     
+                        if (!stringMatches(split[0], "s", "save")) {
+                            helpMessage(sender);
+                            return true;
+                        }
+
+                        if (!split[1].matches("[[a-z][A-Z][0-9][_|/<>]]+?")) {
+                            sender.sendMessage(ChatColor.RED + "Invalid list name.");
+                            return true;
+                        }
+
+                        freezeCmd.setSaveName(split[1]);
+
+                        break;
+                        
+                    default:
                         helpMessage(sender);
                         return true;
-                    }
-
-                    Scanner scanner = new Scanner(split[1]);
-                    if (!scanner.hasNextInt()) {
-                        helpMessage(sender);
-                        return true;
-                    }
-                    freezeCmd.setPlayerLimit(scanner.nextInt());
-                    break;
-                default:
-                    helpMessage(sender);
-                    return true;
+                }
             }
         }
         freezeCmd.execute();
@@ -82,7 +97,12 @@ public class FreezeCommandExecutor implements CommandExecutor {
         return i;
     }
 */
-            
+    private boolean stringMatches(String target, String ... strings) {
+        for (String s : strings)
+            if (target.equalsIgnoreCase(s))
+                return true;
+        return false;
+    }
 
     private void helpMessage(CommandSender sender) {
         sender.sendMessage(ChatColor.YELLOW+"------------------ " + ChatColor.DARK_RED + "Usage for freeze" + ChatColor.YELLOW + " ------------------");
