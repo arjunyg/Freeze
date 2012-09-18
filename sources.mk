@@ -1,4 +1,5 @@
 
-SRCS=	com/carboncraft/Freeze/Freeze.java \
-	com/carboncraft/Freeze/FreezeCommandExecutor.java \
-	com/carboncraft/Freeze/FreezeCommand.java
+SRCS=	com/carboncraft/metrics/Metrics.java \
+	com/carboncraft/freeze/Freeze.java \
+	com/carboncraft/freeze/FreezeCommandExecutor.java \
+	com/carboncraft/freeze/FreezeCommand.java

@@ -1,5 +1,5 @@
 
-package com.carboncraft.Freeze;
+package com.carboncraft.freeze;
 
 import org.bukkit.Server;
 import org.bukkit.OfflinePlayer;
