@@ -10,7 +10,7 @@ SRCS_FULL=$(addprefix $(SRC_DIR)/,$(SRCS))
 
 JAVACFLAGS = -d $(OBJ_DIR) -cp $(BUKKIT_API)
 
-$(JAR): $(SRCS_FULL)
+$(JAR): clean 
 	mkdir -p $(OBJ_DIR)
 	javac $(JAVACFLAGS) $(SRCS_FULL)
 	cp plugin.yml $(OBJ_DIR)
