@@ -1,7 +1,7 @@
 name: Freeze 
 author: Arjun Govindjee
 description: Automatically whitelist any online users.
-version: 0.23
+version: 0.24
 main: com.carboncraft.freeze.Freeze
 
 commands:
