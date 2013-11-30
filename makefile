@@ -8,7 +8,7 @@ include sources.mk
 
 SRCS_FULL=$(addprefix $(SRC_DIR)/,$(SRCS))
 
-JAVACFLAGS = -d $(OBJ_DIR) -cp $(BUKKIT_API)
+JAVACFLAGS = -d $(OBJ_DIR) -cp $(BUKKIT_API) -Xlint:unchecked
 
 $(JAR): clean 
 	mkdir -p $(OBJ_DIR)
