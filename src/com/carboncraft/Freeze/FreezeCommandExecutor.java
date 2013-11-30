@@ -50,6 +50,8 @@ public class FreezeCommandExecutor implements CommandExecutor {
         mapCommand("save", SaveCommand.class);
         mapCommand("l", LoadCommand.class);
         mapCommand("load", LoadCommand.class);
+        mapCommand("ls", ListSavedCommand.class);
+        mapCommand("list", ListSavedCommand.class);
         this.plugin = plugin;
     }
 

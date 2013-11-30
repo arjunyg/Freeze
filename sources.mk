@@ -8,5 +8,6 @@ SRCS=	com/carboncraft/metrics/Metrics.java \
     com/carboncraft/freeze/cmd/EnableCommand.java \
     com/carboncraft/freeze/cmd/PlayerLimitCommand.java \
     com/carboncraft/freeze/cmd/SaveCommand.java \
-    com/carboncraft/freeze/cmd/LoadCommand.java
+    com/carboncraft/freeze/cmd/LoadCommand.java \
+    com/carboncraft/freeze/cmd/ListSavedCommand.java
 

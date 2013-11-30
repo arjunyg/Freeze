@@ -30,5 +30,6 @@ public class HelpCommand extends CommandComponent {
         sender.sendMessage(ChatColor.GOLD + "help " + ChatColor.WHITE + "Print this help message.");
         sender.sendMessage(ChatColor.GOLD + "save:<name> " + ChatColor.WHITE + "Save the current whitelist to disk with <name>.");
         sender.sendMessage(ChatColor.GOLD + "load:<name> " + ChatColor.WHITE + "Load a whitelist with <name> from the disk.");
+        sender.sendMessage(ChatColor.GOLD + "list " + ChatColor.WHITE + "List the names of all the currently saved whitelists.");
     }
 }
