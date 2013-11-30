@@ -46,6 +46,10 @@ public class FreezeCommandExecutor implements CommandExecutor {
         mapCommand("addl", PlayerLimitCommand.class);
         mapCommand("alimit", PlayerLimitCommand.class);
         mapCommand("addlimit", PlayerLimitCommand.class);
+        mapCommand("s", SaveCommand.class);
+        mapCommand("save", SaveCommand.class);
+        mapCommand("l", LoadCommand.class);
+        mapCommand("load", LoadCommand.class);
         this.plugin = plugin;
     }
 

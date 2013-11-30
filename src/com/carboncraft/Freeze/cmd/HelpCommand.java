@@ -25,8 +25,10 @@ public class HelpCommand extends CommandComponent {
         sender.sendMessage(ChatColor.GOLD + "/freeze [arguments ...] ");
         sender.sendMessage(ChatColor.DARK_RED + "Arguments:");
         sender.sendMessage(ChatColor.GOLD + "addlimit:<limit> " + ChatColor.WHITE + "Randomly select the number of players specified by <limit> and add them to the whitelist.");
-        sender.sendMessage(ChatColor.GOLD + "clear " + ChatColor.WHITE + "Clear the whitelist (always is processed first, regardless of input order).");
+        sender.sendMessage(ChatColor.GOLD + "clear " + ChatColor.WHITE + "Clear the whitelist.");
         sender.sendMessage(ChatColor.GOLD + "enable " + ChatColor.WHITE + "Enable the whitelist.");
         sender.sendMessage(ChatColor.GOLD + "help " + ChatColor.WHITE + "Print this help message.");
+        sender.sendMessage(ChatColor.GOLD + "save:<name> " + ChatColor.WHITE + "Save the current whitelist to disk with <name>.");
+        sender.sendMessage(ChatColor.GOLD + "load:<name> " + ChatColor.WHITE + "Load a whitelist with <name> from the disk.");
     }
 }
