@@ -36,7 +36,7 @@ public class FreezeCommandExecutor implements CommandExecutor {
 
     public FreezeCommandExecutor(Freeze plugin) {
         commandMap = new HashMap<String, Class>();
-        mapCommand("cl", ClearCommand.class);
+        mapCommand("c", ClearCommand.class);
         mapCommand("clear", ClearCommand.class);
         mapCommand("h", HelpCommand.class);
         mapCommand("help", HelpCommand.class);
@@ -54,8 +54,8 @@ public class FreezeCommandExecutor implements CommandExecutor {
         mapCommand("list", ListSavedCommand.class);
         mapCommand("rm", DeleteSaveCommand.class);
         mapCommand("delete", DeleteSaveCommand.class);
-        mapCommand("fz", ListSavedCommand.class);
-        mapCommand("freeze", ListSavedCommand.class);
+        mapCommand("fz", FreezeCommand.class);
+        mapCommand("freeze", FreezeCommand.class);
         this.plugin = plugin;
     }
 
