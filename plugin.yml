@@ -1,12 +1,12 @@
 name: Freeze 
 author: Arjun Govindjee
 description: Automatically whitelist any online users.
-version: 0.24
+version: 0.3
 main: com.carboncraft.freeze.Freeze
 
 commands:
   freeze:
-    description: Add all online users to the whitelist. For help type /freeze h
+    description: Manage the whitelist. For help type /freeze h
     usage: /freeze [arguments ...]
-    permission: freeze.freeze
+    permission: freeze.use
     permission-message: §4You do not have permission to do that.

@@ -36,11 +36,11 @@ public class FreezeCommandExecutor implements CommandExecutor {
 
     public FreezeCommandExecutor(Freeze plugin) {
         commandMap = new HashMap<String, Class>();
-        mapCommand("c", ClearCommand.class);
+        mapCommand("cl", ClearCommand.class);
         mapCommand("clear", ClearCommand.class);
         mapCommand("h", HelpCommand.class);
         mapCommand("help", HelpCommand.class);
-        mapCommand("e", EnableCommand.class);
+        mapCommand("on", EnableCommand.class);
         mapCommand("enable", EnableCommand.class);
         mapCommand("al", PlayerLimitCommand.class);
         mapCommand("addl", PlayerLimitCommand.class);
@@ -48,12 +48,14 @@ public class FreezeCommandExecutor implements CommandExecutor {
         mapCommand("addlimit", PlayerLimitCommand.class);
         mapCommand("s", SaveCommand.class);
         mapCommand("save", SaveCommand.class);
-        mapCommand("l", LoadCommand.class);
+        mapCommand("ld", LoadCommand.class);
         mapCommand("load", LoadCommand.class);
         mapCommand("ls", ListSavedCommand.class);
         mapCommand("list", ListSavedCommand.class);
-        mapCommand("d", DeleteSaveCommand.class);
+        mapCommand("rm", DeleteSaveCommand.class);
         mapCommand("delete", DeleteSaveCommand.class);
+        mapCommand("fz", ListSavedCommand.class);
+        mapCommand("freeze", ListSavedCommand.class);
         this.plugin = plugin;
     }
 

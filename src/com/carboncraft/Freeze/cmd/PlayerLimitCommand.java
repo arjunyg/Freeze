@@ -37,14 +37,13 @@ public class PlayerLimitCommand extends CommandComponent {
         if (pLimit > 0) {
             ArrayList<Player> players = new ArrayList<Player>(Arrays.asList(plugin.getServer().getOnlinePlayers()));
             Collections.shuffle(players);
-            ArrayList<Player> addList = new ArrayList<Player>();
             int count = 0;
             for (Player p : players) {
                 if (count >= pLimit) {
                     break;
                 }
                 if (!p.isWhitelisted()) {
-                    addList.add(p);
+                    p.setWhitelisted(true);
                     count++;
                 }
             }

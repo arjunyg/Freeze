@@ -11,7 +11,7 @@ public class ClearCommand extends CommandComponent {
 
 
     static {
-        componentPriority = 0;
+        componentPriority = 1;
     }
 
     public ClearCommand(Freeze plugin, int index, String args[]) {

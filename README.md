@@ -9,6 +9,9 @@ Using a different version may cause it to malfunction.
 Building
 --------
 
+The repository is set up such that if you put your bukkit jar named "bukkit-1.6.4-R2.0.jar" in the lib folder, everything will compile as it should.
+If you wish to use a different version of bukkit, you can either delete the symbolic link (named bukkit.jar) from the lib folder and name your bukkit jar "bukkit.jar," or you could re-link "bukkit.jar" to your bukkit jar.
+
 1. Download Bukkit from http://dl.bukkit.org/downloads/bukkit/list/rb/.
    (Use 1.6.4-R2.0 for best compatibility! - The project should still work with builds going back at least to minecraft version 1.2.5)
 
@@ -28,21 +31,35 @@ Installation
 Command Usage
 -------------
 
-/freeze [arguments ...]
+**/freeze [arguments ...]**
+
 
 Arguments:
 
-**e**  Make sure the whitelist is enabled. If it is off, turn it on, then proceed to add players as normal.
-**p<limit>** Sets a limit on the number of players that can be added.
-**c** Clears the whitelist.
+**addlimit:\<limit\>** - Randomly select the number of players specified by <limit> and add them to the whitelist.
+
+**clear** - Clear the whitelist.
+
+**enable** - Enable the whitelist.
+
+**help** - Print this help message.
+
+**save:\<name\>** - Save the current whitelist to disk with \<name\>.
+
+**load:\<name\>** - Load a whitelist with \<name\> from the disk.
+
+**list** - List the names of all the currently saved whitelists.
+
+**delete:\<name\>** - Delete a whitelist save with name \<name\>.
+
 
 Examples:
 
-/freeze p30 e : Add 30 players to the whitelist and make sure it is enabled.
+/freeze addlimit:30 enable - Add 30 players to the whitelist and make sure it is enabled.
 
-/freeze c : Clear the whitelist.
+/freeze clear - Clear the whitelist.
 
-/freeze : Add all online players to the whitelist.
+/freeze freeze - Add all online players to the whitelist.
 
 License
 -------
