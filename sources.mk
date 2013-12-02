@@ -11,5 +11,6 @@ SRCS=	com/carboncraft/metrics/Metrics.java \
     com/carboncraft/freeze/cmd/LoadCommand.java \
     com/carboncraft/freeze/cmd/ListSavedCommand.java \
     com/carboncraft/freeze/cmd/DeleteSaveCommand.java \
+    com/carboncraft/freeze/cmd/DisableCommand.java \
     com/carboncraft/freeze/cmd/FreezeCommand.java 
 

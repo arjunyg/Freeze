@@ -56,6 +56,8 @@ public class FreezeCommandExecutor implements CommandExecutor {
         mapCommand("delete", DeleteSaveCommand.class);
         mapCommand("fz", FreezeCommand.class);
         mapCommand("freeze", FreezeCommand.class);
+        mapCommand("off", DisableCommand.class);
+        mapCommand("disable", DisableCommand.class);
         this.plugin = plugin;
     }
 
